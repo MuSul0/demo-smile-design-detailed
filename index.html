@@ -1,0 +1,1926 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Design Berlin - Premium Zahnarztpraxis</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #3b5998;
+            --accent: #d4a853;
+            --accent-light: #e6b86b;
+            --dark: #1f2937;
+            --light: #f8fafc;
+            --light-gray: #e2e8f0;
+            --gray: #94a3b8;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --border-radius: 12px;
+            --border-radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--gray);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-accent:hover {
+            background-color: var(--accent-light);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            background-color: var(--light-gray);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .badge i {
+            margin-right: 6px;
+            color: var(--accent);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-left: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 5px;
+            transition: var(--transition);
+        }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(26, 54, 93, 0.9), rgba(13, 148, 136, 0.9)), url('https://picsum.photos/seed/hero/1920/1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--light);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .hero-badges {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* About */
+        .about {
+            background-color: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .value-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .history-timeline {
+            margin-top: 3rem;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            margin-top: 5px;
+            margin-right: 1rem;
+        }
+
+        .timeline-content {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .timeline-content:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-year {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* Services */
+        .services {
+            background-color: var(--light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .service-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .service-link i {
+            margin-left: 5px;
+        }
+
+        /* Process */
+        .process {
+            background-color: var(--white);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 auto 1rem;
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            color: var(--primary);
+            font-size: 2.5rem;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--light-gray);
+            z-index: 1;
+        }
+
+        /* Team */
+        .team {
+            background-color: var(--light);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .team-image {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .team-card:hover .team-image img {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .team-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-position {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            color: var(--dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        /* Pricing */
+        .pricing {
+            background-color: var(--white);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .price-card {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .price-card.featured {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .price-card.featured .price {
+            color: var(--accent);
+        }
+
+        .price-card.featured .btn {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+
+        .price-card.featured .btn:hover {
+            background-color: var(--accent-light);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .price-note {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 1rem;
+        }
+
+        .pricing .price-note {
+            color: var(--gray);
+        }
+
+        .pricing .price-card.featured .price-note {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Gallery */
+        .gallery {
+            background-color: var(--light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            aspect-ratio: 1/1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: var(--white);
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+        }
+
+        .testimonial-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+        }
+
+        .testimonial-rating {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .rating-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: 2rem;
+        }
+
+        .rating-badge i {
+            margin-right: 0.5rem;
+        }
+
+        /* FAQ */
+        .faq {
+            background-color: var(--light);
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-icon {
+            transition: var(--transition);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Contact */
+        .contact {
+            background-color: var(--white);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-details {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-details h3 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-details p {
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--primary);
+            width: 20px;
+            text-align: center;
+        }
+
+        .opening-hours {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .opening-hours dt {
+            font-weight: 500;
+        }
+
+        .opening-hours dd {
+            color: var(--gray);
+        }
+
+        .map-container {
+            height: 300px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-banner p {
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            color: var(--dark);
+            font-size: 1.2rem;
+        }
+
+        .footer-logo-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .footer-column h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-column a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+
+        .social-links-footer {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link-footer {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            color: var(--dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .social-link-footer:hover {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .footer-bottom a {
+            color: var(--gray);
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--accent);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                margin-bottom: 2rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-item {
+                margin: 1rem 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.active div:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .hamburger.active div:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active div:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-badges {
+                position: static;
+                margin-top: 2rem;
+                transform: none;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .team-info {
+                padding: 1rem;
+            }
+
+            .testimonial-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .testimonial-image {
+                margin-bottom: 1rem;
+            }
+
+            .contact-details {
+                padding: 1.5rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 0.5rem;
+            }
+
+            .btn:last-child {
+                margin-bottom: 0;
+            }
+
+            .services-grid,
+            .pricing-grid,
+            .gallery-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .opening-hours {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <span class="logo-text">Smile Design Berlin</span>
+            </a>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="#hero" class="nav-link">Start</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Leistungen</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Über uns</a></li>
+                    <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+                    <li class="nav-item"><a href="#pricing" class="nav-link">Preise</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">Galerie</a></li>
+                    <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Kontakt</a></li>
+                    <li class="nav-item"><a href="#contact" class="btn btn-accent">Termin buchen</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Ihr Lächeln in besten Händen</h1>
+                    <p>Premium Zahnmedizin in Berlin Mitte – Ästhetik, Implantologie und Invisalign für Ihr perfektes Lächeln.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Jetzt Termin vereinbaren</a>
+                        <a href="#services" class="btn btn-outline">Unsere Leistungen</a>
+                    </div>
+                </div>
+                <div class="hero-badges">
+                    <span class="badge"><i class="fas fa-award"></i> 15+ Jahre Erfahrung</span>
+                    <span class="badge"><i class="fas fa-users"></i> 5000+ Patienten</span>
+                    <span class="badge"><i class="fas fa-star"></i> Top Bewertungen</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-subtitle">Über uns</div>
+                <h2>Willkommen bei Smile Design Berlin</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://picsum.photos/seed/praxis/600/400" alt="Smile Design Berlin Praxis">
+                    </div>
+                    <div>
+                        <p>Liebe Patienten,</p>
+                        <p>herzlich willkommen in unserer Praxis für ästhetische Zahnmedizin in Berlin Mitte. Mein Name ist Dr. Michael Weber und ich bin stolz darauf, Ihnen und Ihrer Familie eine Zahnarztpraxis der Extraklasse bieten zu können.</p>
+                        <p>Unser Ziel ist es, Ihnen nicht nur ein gesundes, sondern auch ein wunderschönes Lächeln zu schenken. Mit modernster Technik, hochwertigen Materialien und einem Team von erfahrenen Spezialisten setzen wir auf individuelle Lösungen, die perfekt zu Ihnen passen.</p>
+                        <p>Ihre Zufriedenheit und Ihr Wohlbefinden stehen bei uns an erster Stelle. Vereinbaren Sie noch heute einen Termin und lassen Sie sich von unserem Service überzeugen.</p>
+                        <div class="signature">
+                            <p><strong>Dr. Michael Weber</strong></p>
+                            <p>Praxisinhaber & Zahnarzt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Individuelle Betreuung</h3>
+                        <p>Jeder Patient ist einzigartig – wir nehmen uns Zeit für Ihre persönlichen Wünsche und Bedürfnisse.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-microscope"></i>
+                        <h3>Höchste Präzision</h3>
+                        <p>Modernste Technik und fortlaufende Weiterbildung für perfekte Ergebnisse.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-smile"></i>
+                        <h3>Schmerzfreie Behandlungen</h3>
+                        <p>Angst vor dem Zahnarzt? Bei uns nicht nötig – wir sorgen für Ihr Wohlbefinden.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Materialien</h3>
+                        <p>Nur hochwertigste Materialien für langlebige und ästhetische Ergebnisse.</p>
+                    </div>
+                </div>
+                <div class="history-timeline">
+                    <h3>Unsere Geschichte</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2008</div>
+                            <h4>Gründung der Praxis</h4>
+                            <p>Dr. Michael Weber eröffnet die Smile Design Berlin Praxis in Berlin Mitte mit Fokus auf ästhetische Zahnmedizin.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2012</div>
+                            <h4>Erweiterung des Teams</h4>
+                            <p>Dr. Sarah Klein stößt zum Team hinzu und bringt Expertise in digitaler Zahnmedizin mit.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2015</div>
+                            <h4>Modernisierung</h4>
+                            <p>Komplette Praxisrenovierung mit neuester Technologie und digitalen Workflows.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2020</div>
+                            <h4>Invisalign Premium Provider</h4>
+                            <p>Anerkennung als einer der führenden Invisalign-Anbieter in Berlin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-subtitle">Unsere Leistungen</div>
+                <h2>Ihre Zahnmedizin in Berlin</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <h3>Ästhetische Zahnmedizin</h3>
+                        <p>Veneers, Kronen und Brücken für ein makelloses Lächeln. Wir gestalten Ihr perfektes Lächeln mit hochwertigen Keramikrestaurationen.</p>
+                        <a href="#" class="service-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <h3>Implantologie</h3>
+                        <p>Festsitzender Zahnersatz mit Implantaten. Unsere Implantate bieten Ihnen natürliche Ästhetik und volle Funktionalität.</p>
+                        <a href="#" class="service-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-align-left"></i>
+                        </div>
+                        <h3>Invisalign / Aligner</h3>
+                        <p>Unsichtbare Zahnkorrektur für Erwachsene. Die diskrete Alternative zu herkömmlichen Zahnspangen für ein perfektes Lächeln.</p>
+                        <a href="#" class="service-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Prophylaxe & Zahnreinigung</h3>
+                        <p>Professionelle Zahnreinigung und Vorsorge. Regelmäßige Prophylaxe schützt Ihre Zähne und erhält Ihre Mundgesundheit.</p>
+                        <a href="#" class="service-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-clinic-medical"></i>
+                        </div>
+                        <h3>Wurzelbehandlung</h3>
+                        <p>Schmerzfreie Endodontie mit modernster Technik. Wir retten Ihre natürlichen Zähne mit schonenden Behandlungsmethoden.</p>
+                        <a href="#" class="service-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-sparkles"></i>
+                        </div>
+                        <h3>Bleaching / Zahnaufhellung</h3>
+                        <p>Professionelle Zahnaufhellung für ein strahlendes Lächeln. Schonende Methoden für natürlich weiße Zähne.</p>
+                        <a href="#" class="service-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process">
+            <div class="container">
+                <div class="section-subtitle">Unser Prozess</div>
+                <h2>So arbeiten wir</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Erstberatung & Analyse</h3>
+                        <p>In einem ausführlichen Gespräch analysieren wir Ihre Zahnsituation und besprechen Ihre Wünsche und Ziele.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-file-medical"></i>
+                        </div>
+                        <h3>Individueller Behandlungsplan</h3>
+                        <p>Basierend auf Ihren Bedürfnissen erstellen wir einen maßgeschneiderten Behandlungsplan mit transparenten Kosten.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <h3>Behandlung mit modernster Technik</h3>
+                        <p>Unsere erfahrenen Zahnärzte führen die Behandlung mit größter Sorgfalt und modernster Technologie durch.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Nachsorge & Kontrolle</h3>
+                        <p>Auch nach der Behandlung sind wir für Sie da – mit regelmäßigen Kontrollen und individueller Nachsorge.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team" id="team">
+            <div class="container">
+                <div class="section-subtitle">Unser Team</div>
+                <h2>Erfahrene Zahnärzte in Berlin</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://picsum.photos/seed/team1/300/400" alt="Dr. Michael Weber">
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Dr. Michael Weber</h3>
+                            <p class="team-position">Praxisinhaber & Implantologie</p>
+                            <p class="team-bio">Mit über 15 Jahren Erfahrung in der Implantologie und ästhetischen Zahnmedizin führt Dr. Weber unsere Praxis mit Leidenschaft für perfekte Ergebnisse.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://picsum.photos/seed/team2/300/400" alt="Dr. Sarah Klein">
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Dr. Sarah Klein</h3>
+                            <p class="team-position">Ästhetische Zahnmedizin</p>
+                            <p class="team-bio">Expertin für digitale Zahnmedizin und Invisalign-Behandlungen. Dr. Klein verbindet technische Präzision mit künstlerischem Gespür.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://picsum.photos/seed/team3/300/400" alt="Lisa Müller">
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Lisa Müller</h3>
+                            <p class="team-position">Dentalhygienikerin</p>
+                            <p class="team-bio">Unsere Expertin für Prophylaxe und Zahnreinigung sorgt mit schonenden Methoden für Ihre optimale Mundhygiene.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-image">
+                            <img src="https://picsum.photos/seed/team4/300/400" alt="Anna Schmidt">
+                        </div>
+                        <div class="team-info">
+                            <h3 class="team-name">Anna Schmidt</h3>
+                            <p class="team-position">Praxismanagement</p>
+                            <p class="team-bio">Anna organisiert unseren Praxisalltag und ist Ihre erste Ansprechpartnerin für Termine und Fragen.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-subtitle">Preise</div>
+                <h2>Transparente Kosten</h2>
+                <p class="section-description">Alle Preise verstehen sich als Richtwerte. Nach einer ausführlichen Beratung erhalten Sie einen individuellen Heil- und Kostenplan.</p>
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <h3>Prophylaxe</h3>
+                        <p>Professionelle Zahnreinigung inkl. Fluoridierung</p>
+                        <div class="price">ab 89 <span>Euro</span></div>
+                        <p class="price-note">Empfohlen: 2x jährlich</p>
+                        <a href="#contact" class="btn btn-primary">Termin vereinbaren</a>
+                    </div>
+                    <div class="price-card">
+                        <h3>Bleaching</h3>
+                        <p>Zahnaufhellung (Home Bleaching)</p>
+                        <div class="price">ab 299 <span>Euro</span></div>
+                        <p class="price-note">Inkl. individuelle Schienen</p>
+                        <a href="#contact" class="btn btn-primary">Termin vereinbaren</a>
+                    </div>
+                    <div class="price-card featured">
+                        <h3>Invisalign</h3>
+                        <p>Unsichtbare Zahnkorrektur</p>
+                        <div class="price">ab 3.500 <span>Euro</span></div>
+                        <p class="price-note">Individuelle Behandlungsdauer</p>
+                        <a href="#contact" class="btn">Termin vereinbaren</a>
+                    </div>
+                    <div class="price-card">
+                        <h3>Implantat</h3>
+                        <p>Inkl. Krone (Keramik)</p>
+                        <div class="price">ab 1.800 <span>Euro</span></div>
+                        <p class="price-note">Individuelle Planung erforderlich</p>
+                        <a href="#contact" class="btn btn-primary">Termin vereinbaren</a>
+                    </div>
+                </div>
+                <div class="pricing-note">
+                    <h3>Hinweis zu den Kosten</h3>
+                    <p>Die genannten Preise sind Richtwerte und können je nach individuellem Aufwand variieren. Wir bieten Ihnen gerne eine kostenlose Erstberatung an, in der wir Ihre Situation analysieren und einen detaillierten Heil- und Kostenplan erstellen.</p>
+                    <p>Ratenzahlung ist nach Absprache möglich. Wir akzeptieren alle gängigen Zahlungsmethoden und arbeiten mit verschiedenen Zahnzusatzversicherungen zusammen.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <div class="section-subtitle">Galerie</div>
+                <h2>Vorher & Nachher</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/gallery1/600/600" alt="Zahnaufhellung Vorher/Nachher">
+                        <div class="gallery-caption">
+                            <p>Zahnaufhellung - Strahlend weißes Lächeln</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/gallery2/600/600" alt="Invisalign Behandlung">
+                        <div class="gallery-caption">
+                            <p>Invisalign - Gerade Zähne ohne sichtbare Spange</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/gallery3/600/600" alt="Veneers Behandlung">
+                        <div class="gallery-caption">
+                            <p>Veneers - Perfekte Zahnform und -farbe</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/gallery4/600/600" alt="Implantat Behandlung">
+                        <div class="gallery-caption">
+                            <p>Implantat - Natürlicher Zahnersatz</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/gallery5/600/600" alt="Praxisraum">
+                        <div class="gallery-caption">
+                            <p>Unsere modern ausgestatteten Behandlungsräume</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/gallery6/600/600" alt="Teamfoto">
+                        <div class="gallery-caption">
+                            <p>Unser engagiertes Team</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-subtitle">Bewertungen</div>
+                <h2>Was unsere Patienten sagen</h2>
+                <div class="rating-badge">
+                    <i class="fas fa-star"></i>
+                    <span>4.9 / 5.0</span>
+                    <span>auf Google & Jameda</span>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://picsum.photos/seed/testimonial1/100/100" alt="Patient 1">
+                            </div>
+                            <div>
+                                <h4 class="testimonial-name">Markus T.</h4>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Nach Jahren mit Angst vor dem Zahnarzt habe ich hier endlich eine Praxis gefunden, in der ich mich wohlfühle. Die Behandlung war völlig schmerzfrei und das Ergebnis einfach perfekt!"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://picsum.photos/seed/testimonial2/100/100" alt="Patient 2">
+                            </div>
+                            <div>
+                                <h4 class="testimonial-name">Sarah L.</h4>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Mein Invisalign-Behandlung war ein voller Erfolg! Die Beratung war ausführlich und das Team hat mich während der gesamten Behandlung perfekt begleitet. Mein neues Lächeln ist einfach großartig!"</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://picsum.photos/seed/testimonial3/100/100" alt="Patient 3">
+                            </div>
+                            <div>
+                                <h4 class="testimonial-name">Thomas B.</h4>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Die professionelle Zahnreinigung ist jedes Mal ein Erlebnis. Ich fühle mich danach immer wie neu geboren. Das Team ist super freundlich und kompetent."</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-image">
+                                <img src="https://picsum.photos/seed/testimonial4/100/100" alt="Patient 4">
+                            </div>
+                            <div>
+                                <h4 class="testimonial-name">Julia K.</h4>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Mein Implantat fühlt sich an wie ein echter Zahn! Die Behandlung war zwar aufwendig, aber das Ergebnis ist einfach perfekt. Vielen Dank an das ganze Team!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="section-subtitle">Häufige Fragen</div>
+                <h2>Alles was Sie wissen müssen</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Wie läuft die Erstberatung ab?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>In der kostenlosen Erstberatung analysieren wir Ihre Zahnsituation, besprechen Ihre Wünsche und erstellen einen individuellen Behandlungsplan. Dies dauert etwa 30-45 Minuten.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Welche Zahlungsmöglichkeiten gibt es?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Wir akzeptieren Barzahlung, EC-Karte, Kreditkarte und bieten Ratenzahlung an. Zudem arbeiten wir mit verschiedenen Zahnzusatzversicherungen zusammen.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Wie lange dauert eine Implantat-Behandlung?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Die Dauer hängt vom Einzelfall ab. In der Regel dauert der gesamte Prozess (inkl. Einheilphase) 3-6 Monate. Die eigentliche Implantation nimmt etwa 1-2 Stunden pro Implantat in Anspruch.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Ist Invisalign schmerzhaft?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Invisalign ist in der Regel weniger schmerzhaft als herkömmliche Zahnspangen. Zu Beginn einer neuen Schiene kann es zu einem leichten Druckgefühl kommen, das jedoch schnell nachlässt.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Bieten Sie Angstpatienten-Betreuung?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ja, wir haben besondere Erfahrung mit Angstpatienten. Wir nehmen uns extra Zeit, erklären jeden Schritt und bieten bei Bedarf Sedierung (Dämmerschlaf) an.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Wie oft sollte ich zur Prophylaxe?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Wir empfehlen eine professionelle Zahnreinigung alle 6 Monate. Bei bestimmten Vorerkrankungen (z.B. Parodontitis) kann eine häufigere Prophylaxe sinnvoll sein.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <div class="container">
+                <h2>Bereit für Ihr perfektes Lächeln?</h2>
+                <p>Vereinbaren Sie jetzt einen Termin für Ihre persönliche Beratung in unserer Praxis in Berlin Mitte.</p>
+                <a href="#contact" class="btn btn-accent">Jetzt Termin vereinbaren</a>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-subtitle">Kontakt</div>
+                <h2>Wir freuen uns auf Sie</h2>
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <h3>Termin anfragen</h3>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Ihr Name*</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-Mail*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Ihre Nachricht*</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" required> Ich akzeptiere die <a href="#">Datenschutzbestimmungen</a>.
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Termin anfragen</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-details">
+                            <h3>Smile Design Berlin</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Friedrichstraße 123, 10117 Berlin</p>
+                            <p><i class="fas fa-phone"></i> 030 123 456 78</p>
+                            <p><i class="fas fa-envelope"></i> info@smile-design-berlin.de</p>
+                            <h4>Öffnungszeiten</h4>
+                            <dl class="opening-hours">
+                                <dt>Montag</dt>
+                                <dd>08:00 - 18:00</dd>
+                                <dt>Dienstag</dt>
+                                <dd>08:00 - 18:00</dd>
+                                <dt>Mittwoch</dt>
+                                <dd>08:00 - 14:00</dd>
+                                <dt>Donnerstag</dt>
+                                <dd>08:00 - 20:00</dd>
+                                <dt>Freitag</dt>
+                                <dd>08:00 - 16:00</dd>
+                                <dt>Samstag</dt>
+                                <dd>nach Vereinbarung</dd>
+                            </dl>
+                        </div>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2428.409035850849!2d13.38885991567449!3d52.5170365798112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c3a6e3a6e3%3A0x426b6b6b6b6b6b6b!2sFriedrichstra%C3%9Fe%20123%2C%2010117%20Berlin!5e0!3m2!1sen!2sde!4v1620000000000!5m2!1sen!2sde" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <span class="footer-logo-text">Smile Design Berlin</span>
+                    </div>
+                    <p>Ihre Premium Zahnarztpraxis in Berlin Mitte für ästhetische Zahnmedizin, Implantologie und Invisalign.</p>
+                    <div class="social-links-footer">
+                        <a href="#" class="social-link-footer"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link-footer"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link-footer"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link-footer"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Start</a></li>
+                        <li><a href="#services">Leistungen</a></li>
+                        <li><a href="#about">Über uns</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#pricing">Preise</a></li>
+                        <li><a href="#gallery">Galerie</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Leistungen</h3>
+                    <ul>
+                        <li><a href="#">Ästhetische Zahnmedizin</a></li>
+                        <li><a href="#">Implantologie</a></li>
+                        <li><a href="#">Invisalign</a></li>
+                        <li><a href="#">Prophylaxe</a></li>
+                        <li><a href="#">Wurzelbehandlung</a></li>
+                        <li><a href="#">Bleaching</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Friedrichstraße 123, 10117 Berlin</p>
+                    <p><i class="fas fa-phone"></i> 030 123 456 78</p>
+                    <p><i class="fas fa-envelope"></i> info@smile-design-berlin.de</p>
+                    <h4>Öffnungszeiten</h4>
+                    <p>Mo-Fr: 08:00 - 18:00</p>
+                    <p>Sa: nach Vereinbarung</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Smile Design Berlin. Alle Rechte vorbehalten.</p>
+                <div>
+                    <a href="#">Impressum</a>
+                    <a href="#">Datenschutz</a>
+                    <a href="#">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Sticky Header
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const currentlyActive = document.querySelector('.faq-item.active');
+                if (currentlyActive && currentlyActive !== item) {
+                    currentlyActive.classList.remove('active');
+                }
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
